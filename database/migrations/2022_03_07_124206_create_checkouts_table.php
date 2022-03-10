@@ -15,6 +15,8 @@ class CreateCheckoutsTable extends Migration
     {
         Schema::create('checkouts', function (Blueprint $table) {
             $table->id();
+
+            //2nd method (syarat harus sesuai dengan nama tabelnya (contoh user_id berarti relasi ke tabel users kolom id))
             $table->foreignId('user_id')->constrained();
             $table->foreignId('camp_id')->constrained();
             $table->string('card_number', 20);

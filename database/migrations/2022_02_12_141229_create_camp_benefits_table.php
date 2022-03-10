@@ -19,6 +19,7 @@ class CreateCampBenefitsTable extends Migration
             $table->string('name');
             $table->timestamps();
 
+            //1st method buat relasi
             $table->foreign('camp_id')->references('id')->on('camps')->onDelete('cascade');
         });
 
